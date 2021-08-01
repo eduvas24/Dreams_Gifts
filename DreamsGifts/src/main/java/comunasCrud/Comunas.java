@@ -77,8 +77,6 @@ public class Comunas extends javax.swing.JFrame {
 
         jLabelComunasRegistradas.setText("Comunas Registradas");
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 51));
-
         nombreComuna.setText("Nombre Comuna");
 
         btnCancelar.setText("Cancelar");
@@ -116,7 +114,7 @@ public class Comunas extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(IngresarCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
