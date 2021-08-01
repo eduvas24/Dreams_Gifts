@@ -57,11 +57,11 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="333" max="-2" attributes="0"/>
-                              <Component id="jLabelComunasRegistradas" min="-2" pref="127" max="-2" attributes="0"/>
+                              <Component id="txtComunasRegistradas" min="-2" pref="127" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jTextFieldBuscarComunas" min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="itxbuscarComunas" min="-2" pref="209" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -91,8 +91,8 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="36" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabelComunasRegistradas" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextFieldBuscarComunas" alignment="3" max="32767" attributes="0"/>
+                  <Component id="txtComunasRegistradas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="itxbuscarComunas" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="107" max="-2" attributes="0"/>
@@ -119,7 +119,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTableComunas">
+        <Component class="javax.swing.JTable" name="tablaComunas">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="3" rowCount="4">
@@ -170,14 +170,14 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabelComunasRegistradas">
+    <Component class="javax.swing.JLabel" name="txtComunasRegistradas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Comunas Registradas"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="comunas">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextFieldBuscarComunas">
+    <Component class="javax.swing.JTextField" name="itxbuscarComunas">
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
 
@@ -193,13 +193,13 @@
                   <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="btnCancelar" min="-2" pref="185" max="-2" attributes="0"/>
-                      <Component id="IngresarComuna" min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="ingresarComuna" min="-2" pref="209" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="72" max="32767" attributes="0"/>
-                  <Component id="jLabelCodigoComuna" min="-2" pref="99" max="-2" attributes="0"/>
+                  <Component id="txtCodigoComuna" min="-2" pref="99" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="IngresarCodigoComuna" min="-2" pref="236" max="-2" attributes="0"/>
+                      <Component id="ingresarCodigoComuna" min="-2" pref="236" max="-2" attributes="0"/>
                       <Component id="btnGuardar" min="-2" pref="185" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="18" max="32767" attributes="0"/>
@@ -212,9 +212,9 @@
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="nombreComuna" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="IngresarCodigoComuna" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="IngresarComuna" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelCodigoComuna" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ingresarCodigoComuna" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ingresarComuna" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCodigoComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -232,7 +232,10 @@
             <Property name="text" type="java.lang.String" value="Nombre Comuna"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="IngresarComuna">
+        <Component class="javax.swing.JTextField" name="ingresarComuna">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ingresarComunaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCancelar">
           <Properties>
@@ -242,9 +245,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="IngresarCodigoComuna">
+        <Component class="javax.swing.JTextField" name="ingresarCodigoComuna">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelCodigoComuna">
+        <Component class="javax.swing.JLabel" name="txtCodigoComuna">
           <Properties>
             <Property name="text" type="java.lang.String" value="C&#xf3;digo Comuna"/>
           </Properties>

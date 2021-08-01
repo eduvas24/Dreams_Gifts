@@ -16,18 +16,18 @@ public class Comunas extends javax.swing.JFrame {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTableComunas = new javax.swing.JTable();
+        tablaComunas = new javax.swing.JTable();
         btnDesactivar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
-        jLabelComunasRegistradas = new javax.swing.JLabel();
+        txtComunasRegistradas = new javax.swing.JLabel();
         comunas = new javax.swing.JLabel();
-        jTextFieldBuscarComunas = new javax.swing.JTextField();
+        itxbuscarComunas = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         nombreComuna = new javax.swing.JLabel();
-        IngresarComuna = new javax.swing.JTextField();
+        ingresarComuna = new javax.swing.JTextField();
         btnCancelar = new javax.swing.JButton();
-        IngresarCodigoComuna = new javax.swing.JTextField();
-        jLabelCodigoComuna = new javax.swing.JLabel();
+        ingresarCodigoComuna = new javax.swing.JTextField();
+        txtCodigoComuna = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
@@ -48,7 +48,7 @@ public class Comunas extends javax.swing.JFrame {
 
         jScrollPane1.setBackground(new java.awt.Color(0, 102, 255));
 
-        jTableComunas.setModel(new javax.swing.table.DefaultTableModel(
+        tablaComunas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -59,7 +59,7 @@ public class Comunas extends javax.swing.JFrame {
                 "Nombre Comuna", "Código Comuna", "Estado"
             }
         ));
-        jScrollPane1.setViewportView(jTableComunas);
+        jScrollPane1.setViewportView(tablaComunas);
 
         btnDesactivar.setText("Desactivar");
         btnDesactivar.addActionListener(new java.awt.event.ActionListener() {
@@ -75,9 +75,15 @@ public class Comunas extends javax.swing.JFrame {
             }
         });
 
-        jLabelComunasRegistradas.setText("Comunas Registradas");
+        txtComunasRegistradas.setText("Comunas Registradas");
 
         nombreComuna.setText("Nombre Comuna");
+
+        ingresarComuna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ingresarComunaActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +92,7 @@ public class Comunas extends javax.swing.JFrame {
             }
         });
 
-        jLabelCodigoComuna.setText("Código Comuna");
+        txtCodigoComuna.setText("Código Comuna");
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -107,12 +113,12 @@ public class Comunas extends javax.swing.JFrame {
                 .addGap(130, 130, 130)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IngresarComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ingresarComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(jLabelCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(IngresarCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ingresarCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -122,9 +128,9 @@ public class Comunas extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nombreComuna)
-                    .addComponent(IngresarCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IngresarComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelCodigoComuna))
+                    .addComponent(ingresarCodigoComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ingresarComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoComuna))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar)
@@ -146,9 +152,9 @@ public class Comunas extends javax.swing.JFrame {
                                 .addGap(0, 430, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(333, 333, 333)
-                                .addComponent(jLabelComunasRegistradas, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtComunasRegistradas, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextFieldBuscarComunas, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(itxbuscarComunas, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
@@ -171,8 +177,8 @@ public class Comunas extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelComunasRegistradas)
-                    .addComponent(jTextFieldBuscarComunas))
+                    .addComponent(txtComunasRegistradas)
+                    .addComponent(itxbuscarComunas))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
@@ -200,6 +206,10 @@ public class Comunas extends javax.swing.JFrame {
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void ingresarComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarComunaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ingresarComunaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,20 +247,20 @@ public class Comunas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField IngresarCodigoComuna;
-    private javax.swing.JTextField IngresarComuna;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnDesactivar;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel comunas;
+    private javax.swing.JTextField ingresarCodigoComuna;
+    private javax.swing.JTextField ingresarComuna;
+    private javax.swing.JTextField itxbuscarComunas;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JLabel jLabelCodigoComuna;
-    private javax.swing.JLabel jLabelComunasRegistradas;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTableComunas;
-    private javax.swing.JTextField jTextFieldBuscarComunas;
     private javax.swing.JLabel nombreComuna;
+    private javax.swing.JTable tablaComunas;
+    private javax.swing.JLabel txtCodigoComuna;
+    private javax.swing.JLabel txtComunasRegistradas;
     // End of variables declaration//GEN-END:variables
 }
